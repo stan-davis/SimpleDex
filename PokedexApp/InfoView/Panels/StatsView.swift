@@ -22,7 +22,7 @@ struct StatsView: View
                 
                 HStack
                 {
-                    Text("\(stat.stat.name.capitalized)")
+                    Text("\(stat.stat.name.replacingOccurrences(of: "-", with: " ").capitalized)")
                         .foregroundColor(Color.gray)
                         .frame(width: 130, alignment: .leading)
                     Spacer()

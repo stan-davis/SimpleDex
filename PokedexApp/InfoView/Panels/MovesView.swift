@@ -22,13 +22,13 @@ struct MovesView: View
                 {
                     move in
                     
-                    ForEach(move.version_group_details.filter({$0.move_learn_method.name.contains("level-up")}), id: \.self)
+                    ForEach(move.version_group_details.filter({$0.move_learn_method.name.contains("level-up") && $0.version_group.name.contains("sword-shield")}), id: \.self)
                     {
                         details in
                         
                         HStack
                         {
-                            Text(move.move.name.capitalized)
+                            Text(move.move.name.replacingOccurrences(of: "-", with: " ").capitalized)
                                 .foregroundColor(Color.gray)
                                 .frame(width: 130, alignment: .leading)
                             Spacer()

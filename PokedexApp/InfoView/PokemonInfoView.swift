@@ -77,6 +77,7 @@ struct PokemonInfoView: View
                     StatsView(stats: infoViewModel.stats).tag(1)
                     MovesView(moves: infoViewModel.moves).tag(2)
                     EvolutionView(pokemonID: pokemonID).tag(3)
+                    LocationsView(pokemonID: pokemonID).tag(4)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .background(Color.white)
@@ -96,7 +97,7 @@ struct PokemonInfoView: View
 struct TabBarView: View
 {
     @Binding var currentTab: Int
-    var tabTitles: [String] = ["About", "Base Stats", "Moves", "Evolutions"]
+    var tabTitles: [String] = ["About", "Base Stats", "Moves", "Evolutions", "Locations"]
     
     var body: some View
     {
