@@ -1,3 +1,2 @@
 # SimpleDex
-## A Pokédex application for iOS, written in Swift.
-A submission for University work.
+A Pokédex application for iOS, written in SwiftUI. University work.
